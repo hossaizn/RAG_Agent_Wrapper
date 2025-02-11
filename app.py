@@ -2,7 +2,7 @@ import streamlit as st
 import requests
 
 # Streamlit UI Configuration
-st.set_page_config(page_title="QueryGenie: RAG-Powered Conversational AI", page_icon="💬", layout="wide")
+st.set_page_config(page_title="QueryGenie: RAG-Powered Conversational AI", layout="wide")
 
 # Title & Description
 st.title("QueryGenie: RAG-Powered Conversational AI")
@@ -17,7 +17,7 @@ with st.expander("Show Chat History"):
         history_data = history_response.json()
         if history_data["status"] == "success" and history_data["conversation_history"]:
             for message in history_data["conversation_history"]:
-                role = "🧑‍💻 You" if message["role"] == "user" else "🤖 AI"
+                role = "You" if message["role"] == "user" else "AI"
                 st.markdown(f"**{role}:** {message['content']}")
         else:
             st.info("No conversation history available.")
@@ -41,7 +41,7 @@ if st.button("Send"):
             data = response.json()
 
             # Display AI or API response
-            st.success("🤖 AI Response:")
+            st.success("AI Response:")
 
             if data.get("api_response"):
                 st.write(data["api_response"])
@@ -57,6 +57,6 @@ if st.button("Reset Chat"):
     reset_response = requests.delete(reset_url)
 
     if reset_response.status_code == 200:
-        st.success("🤖 Chat history cleared!")
+        st.success("Chat history cleared!")
     else:
         st.error("Failed to reset chat history.")
