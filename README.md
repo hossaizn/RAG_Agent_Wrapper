@@ -9,7 +9,7 @@ This is an AI chatbot that combines Cohere’s AI with real-time data retrieval 
 
 ## Demo
 To see how this chatbot works, check out the screenshots below:
-
+! [Chatbot UI] https://github.com/hossaizn/RAG_Agent_Wrapper/blob/main/IMG_6599.jpg 
 
 
 ## Tech Stack
