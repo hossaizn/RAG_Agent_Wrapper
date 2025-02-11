@@ -8,9 +8,9 @@ This is an AI chatbot that combines Cohere’s AI with real-time data retrieval 
 - Built with FastAPI for the backend and Streamlit for the user interface.
 
 ## Demo
-To see how this chatbot works, check out the screenshots below:
+To see how this chatbot works, check out the screenshot below:
 ! [Chatbot UI] https://github.com/hossaizn/RAG_Agent_Wrapper/blob/main/IMG_6599.jpg 
-
+![New Screenshot] https://github.com/hossaizn/RAG_Agent_Wrapper/blob/main/IMG_6601.jpg 
 
 ## Tech Stack
 - AI Model: Cohere API
